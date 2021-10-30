@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwaters <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 17:22:27 by pwaters           #+#    #+#             */
-/*   Updated: 2021/10/30 14:55:29 by pwaters          ###   ########.fr       */
+/*   Created: 2021/10/29 13:32:46 by pwaters           #+#    #+#             */
+/*   Updated: 2021/10/29 13:41:09 by pwaters          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb)
-{
-	if (nb < 0 || nb > 12)
-		return (0);
-	else if (nb == 0 || nb == 1)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
-}
+#ifndef FT_H
+# define FT_H
+
+#include <unistd.h>
+
+void	ft_putchar(char c);
+void	ft_putnbr(int nb);
+void	ft_putstr(char *str);
+
+#endif
 

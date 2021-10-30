@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pwaters <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 17:22:27 by pwaters           #+#    #+#             */
-/*   Updated: 2021/10/30 14:55:29 by pwaters          ###   ########.fr       */
+/*   Created: 2021/10/30 14:35:30 by pwaters           #+#    #+#             */
+/*   Updated: 2021/10/30 14:46:14 by pwaters          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_recursive_factorial(int nb)
+#include "ft.h"
+
+int ft_iterative_factorial(int nb);
+
+int main(void)
 {
-	if (nb < 0 || nb > 12)
-		return (0);
-	else if (nb == 0 || nb == 1)
-		return (1);
-	else
-		return (nb * ft_recursive_factorial(nb - 1));
+	ft_putstr("\nFact(-4) = \n");
+	ft_putnbr(ft_iterative_factorial(-4));
+	ft_putstr("\nFact(0) = \n");
+	ft_putnbr(ft_iterative_factorial(0));
+	ft_putstr("\nFact(12) = \n");
+	ft_putnbr(ft_iterative_factorial(12));
+	ft_putstr("\nFact(13) = \n");
+	ft_putnbr(ft_iterative_factorial(13));
 }
 
