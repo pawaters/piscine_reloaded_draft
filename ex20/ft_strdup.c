@@ -6,13 +6,21 @@
 /*   By: pwaters <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 16:22:29 by pwaters           #+#    #+#             */
-/*   Updated: 2021/10/29 16:48:28 by pwaters          ###   ########.fr       */
+/*   Updated: 2021/10/31 13:03:25 by paw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int		ft_strlen(char *str);
+int	ft_strlen(char *str)
+{
+	int len;
+
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
+}
 
 char	*ft_strdup(char *src)
 {
@@ -20,9 +28,12 @@ char	*ft_strdup(char *src)
 	char *dest;
 
 	i = 0;
-	dest = malloc (ft_strlen(src) * char);
+	dest = malloc (ft_strlen(src) * sizeof(char));
 	while (src[i] != '\0')
-		dest[i] = src[i++];
+	{	
+		dest[i] = src[i];
+		i++;
+	}
 	dest[i] = '\0';
 	return (dest);
 }

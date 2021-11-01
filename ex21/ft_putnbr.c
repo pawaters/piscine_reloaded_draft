@@ -6,14 +6,19 @@
 /*   By: pwaters <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 13:20:23 by pwaters           #+#    #+#             */
-/*   Updated: 2021/10/29 14:13:48 by pwaters          ###   ########.fr       */
+/*   Updated: 2021/10/31 13:27:21 by paw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
 void	ft_putnbr(int nb)
-{
+{	
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = -nb;
+	}
 	if (nb > 9)
 		ft_putnbr(nb / 10);
 	ft_putchar(nb % 10 + 48);

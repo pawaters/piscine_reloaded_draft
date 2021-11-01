@@ -6,7 +6,7 @@
 #    By: pwaters <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 17:25:44 by pwaters           #+#    #+#              #
-#    Updated: 2021/10/29 17:45:50 by pwaters          ###   ########.fr        #
+#    Updated: 2021/10/31 13:40:07 by paw              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,9 @@ all: $(NAME)
 $(NAME): create_o_files
 	ar -rc $(NAME) $(OFILES)
 	ranlib $(NAME)
+
+create_o_files:
+	gcc -Wall -Wextra -Werror -c $(SRCS) -I $(INCLUDES)
 
 clean: 
 	rm -f $(OFILES)

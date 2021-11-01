@@ -6,12 +6,11 @@
 /*   By: pwaters <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 16:44:40 by pwaters           #+#    #+#             */
-/*   Updated: 2021/10/29 16:54:42 by pwaters          ###   ########.fr       */
+/*   Updated: 2021/10/31 13:31:57 by paw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "ft.h"
 
 int *ft_range(int min, int max)
 {
@@ -23,10 +22,13 @@ int *ft_range(int min, int max)
 	len = max - min;
 	if (min >= max)
 		return (0);
-	tab = malloc ((max - min) * int);
+	tab = malloc ((max - min) * sizeof(int));
 	while (i < len)
-		tab[i] = min + i++;
+	{
+		tab[i] = min + i;
+		i++;
+	}
 	tab[i] = '\0';
-	return (tab)
+	return (tab);
 }
 

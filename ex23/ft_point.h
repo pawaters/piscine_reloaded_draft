@@ -6,15 +6,14 @@
 /*   By: pwaters <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 17:18:37 by pwaters           #+#    #+#             */
-/*   Updated: 2021/10/29 17:22:45 by pwaters          ###   ########.fr       */
+/*   Updated: 2021/10/31 13:36:44 by paw              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_POINT_H
 # define FT_POINT_H
 
-typedef struct point
-{
+typedef struct point {
 	int x;
 	int y;
 } t_point;
